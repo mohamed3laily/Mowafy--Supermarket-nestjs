@@ -1,0 +1,36 @@
+// schema.prisma
+
+datasource db {
+  provider = "postgresql" // Replace with your database provider
+  url      = env("DATABASE_URL") // Replace with your database connection URL
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id        String  @id @default(uuid())
+  name      String   @unique
+  description String
+  price    Decimal
+  imageUrl  String
+
+  categoryId   Int?  
+  category    Category? @relation(fields: [categoryId], references: [id])
+
+  inStock   Boolean  @default(true)
+  stock     Int
+
+  @@index(name)
+}
+
+model Category {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  description String?
+  imageUrl  String?
+
+  products  Product[]
+  @@index(name)
+}
