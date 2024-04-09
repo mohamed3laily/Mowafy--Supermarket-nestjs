@@ -19,7 +19,7 @@ This project is an Ecommerce Supermarket application built with NestJS, TypeScri
 - **Prisma**: A modern database toolkit for Node.js and TypeScript, providing an ORM and query builder.
 - **PostgreSQL**: A powerful, open-source relational database system.
 
-![project ERD]https://raw.githubusercontent.com/mohamed3laily/Mowafy--online-Supermarket/main/mowafy%20erd1.drawio.png
+[project ERD](https://raw.githubusercontent.com/mohamed3laily/Mowafy--online-Supermarket/main/mowafy%20erd1.drawio.png)
 
 ## Getting Started
 
